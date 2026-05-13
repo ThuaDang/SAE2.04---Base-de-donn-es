@@ -2,6 +2,7 @@ DROP SCHEMA IF EXISTS parcoursup CASCADE;
 CREATE SCHEMA parcoursup;
 SET SCHEMA 'parcoursup';
 
+DROP TYPE IF EXISTS type_bac;
 CREATE TYPE type_bac AS ENUM (
 	'Bac général',
 	'Bac technologique',
@@ -9,6 +10,7 @@ CREATE TYPE type_bac AS ENUM (
 	'Autres'
 );
 
+DROP TYPE IF EXISTS libelle_mention;
 CREATE TYPE libelle_mention AS ENUM(
 	'Sans information',
 	'Sans mention',
@@ -128,4 +130,4 @@ CREATE TABLE _rang_dernier_appele_selon_regroupement(
 	session_annee INT REFERENCES _session(session_annee),
 	cod_aff_form VARCHAR(30) REFERENCES _formation(cod_aff_form),
 	CONSTRAINT rang_dernier_appele_selon_regroupement_PK PRIMARY KEY (libelle_regroupement, session_annee, cod_aff_form)
-)
+);
