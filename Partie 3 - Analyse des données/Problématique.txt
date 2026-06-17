@@ -1,0 +1,12 @@
+Au sein d'une formation, l'offre de places, le volume de candidatures et le nombre d'admis sont-ils corrélés entre eux ?
+
+Pouvons nous prédire le nombre d'admis à partir de la capacité d'une formation, la part féminine suit-elle la même logique ?
+
+
+X1 = Capacité
+
+X2 = Effectif_total_candidats
+
+X3 = Effectif_total_candidates
+
+Y = Total_admis
